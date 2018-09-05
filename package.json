@@ -1,0 +1,43 @@
+{
+  "name": "development_build",
+  "version": "1.0.0",
+  "description": "Node Dev Build",
+  "main": "index.js",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-es2015-node": "^6.1.1",
+    "eslint": "^5.5.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-watch": "^4.0.2",
+    "express": "^4.16.3",
+    "node-babel": "^0.1.2",
+    "nodeunit": "^0.11.3",
+    "open": "^0.0.5",
+    "path": "^0.12.7",
+    "webpack": "^4.17.2",
+    "webpack-dev-middleware": "^3.2.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.2"
+  },
+  "scripts": {
+    "prestart": "nodeunit tests",
+    "start": "babel-node buildscripts/srcServer.js lint:watch",
+    "lint": "esw src buildscripts --color",
+    "lint:watch": "npm run lint -- --watch",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "debug": "babel-node buildscripts/srcServer.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gavin-dewhirst/development_build.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gavin-dewhirst/development_build/issues"
+  },
+  "homepage": "https://github.com/gavin-dewhirst/development_build#readme"
+}
